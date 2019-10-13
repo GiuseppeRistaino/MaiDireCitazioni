@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginLeft="2dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#ffea00"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/flag"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_music_note"
+                android:transitionName="logo" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/flag"
+                android:layout_toLeftOf="@+id/dots"
+                android:gravity="center"
+                android:text="India"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/dots"
+                android:background="#ffea00"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/ic_dots" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

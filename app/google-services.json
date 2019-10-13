@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "560948667076",
+    "firebase_url": "https://maidirecitazioni.firebaseio.com",
+    "project_id": "maidirecitazioni",
+    "storage_bucket": "maidirecitazioni.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560948667076:android:a1667cbee61faa0c",
+        "android_client_info": {
+          "package_name": "com.theoffice.maidirecitazioni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560948667076-0q38gf71dggngi6rse5v1k137v25eio9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theoffice.maidirecitazioni",
+            "certificate_hash": "59d2e6f2f160b411a008825d8b84be6102671009"
+          }
+        },
+        {
+          "client_id": "560948667076-peskii32m0aqh31rvk59ogq23mn02hkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6YgeO8H6yquBTY9jwgHLAykQ4MQbDAdM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560948667076-peskii32m0aqh31rvk59ogq23mn02hkg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

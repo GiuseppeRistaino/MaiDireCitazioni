@@ -32,6 +32,7 @@ public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 		//�������� ������ ���� � ����� ��� ������ ����������
 		String packageName = context.getPackageName();
 		DB_PATH = String.format("//data//data//%s//databases//", packageName);
+		//DB_PATH =  context.getApplicationContext().getFilesDir().getParentFile().getPath() + "/databases/";
 		DB_NAME = databaseName;
 		openDataBase();
 	}
@@ -41,6 +42,7 @@ public class ExternalDbOpenHelper extends SQLiteOpenHelper {
 		boolean dbExist = checkDataBase();
 		if (!dbExist) {
 			this.getReadableDatabase();
+			this.close();
 			try {
 				copyDataBase();
 			} catch (IOException e) {

@@ -13,11 +13,12 @@
     android:focusableInTouchMode="true">
 
     <EditText
+        android:id="@+id/editText_filtraPersonaggi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_filtraPersonaggi"
+        android:hint="Find"
         android:inputType="text"
-        android:hint="Find"/>
+        android:minHeight="48dp" />
 
     <ListView
         android:layout_width="match_parent"

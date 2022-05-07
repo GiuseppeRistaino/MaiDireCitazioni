@@ -9,14 +9,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -27,6 +19,16 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.view.MenuItemCompat;
+import androidx.core.view.ViewCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.secondopianorcost.theoffice.maidirecitazioni.Adapters.AdapterListViewPersonaggi;
 import com.secondopianorcost.theoffice.maidirecitazioni.Adapters.RecyclerAdapter;
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     RecyclerView.LayoutManager layoutManager;
     ArrayList<Character> arrayList = new ArrayList<>();
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -176,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void permissionStart_post_lollipop() {
         int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) {
@@ -227,8 +231,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     private void exec_pre_lollipop() {
-        listViewPersonaggi = (ListView) findViewById(R.id.listView_personaggi);
-        editTextFiltraPersonaggi = (EditText) findViewById(R.id.editText_filtraPersonaggi);
+        //listViewPersonaggi = (ListView) findViewById(R.id.listView_personaggi);
+        //editTextFiltraPersonaggi = (EditText) findViewById(R.id.editText_filtraPersonaggi);
 
         Log.i("LOG", "sono in cacca");
         dbHelper = new ExternalDbOpenHelper(this, DB_CONSTANT.DB_NAME);

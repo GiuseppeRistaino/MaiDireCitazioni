@@ -7,8 +7,8 @@ android {
         applicationId "com.theoffice.maidirecitazioni"
         minSdkVersion 21
         targetSdkVersion 32
-        versionCode 8
-        versionName "1.7"
+        versionCode 10
+        versionName "1.9"
         multiDexEnabled true
     }
     buildTypes {
